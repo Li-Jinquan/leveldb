@@ -140,6 +140,9 @@ struct LEVELDB_EXPORT Options {
   // Many applications will benefit from passing the result of
   // NewBloomFilterPolicy() here.
   const FilterPolicy* filter_policy = nullptr;
+
+  // If a value is large than block_size, store it in a seperate block.
+  bool seperate_block = false;
 };
 
 // Options that control read operations
